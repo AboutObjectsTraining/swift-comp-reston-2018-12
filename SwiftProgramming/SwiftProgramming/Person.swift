@@ -21,11 +21,11 @@ protocol Likeable
     func unlike()
 }
 
-extension Likeable {
-    var isCool: Bool {
-        return numberOfLikes > 10
-    }
-}
+//extension Likeable {
+//    var isCool: Bool {
+//        return numberOfLikes > 10
+//    }
+//}
 
 // MARK: - Friendable Protocol
 protocol Friendable
@@ -40,9 +40,9 @@ protocol Friendable
 }
 
 // MARK: - Person Class
-class Person: Likeable, Friendable, CustomDebugStringConvertible
+class Person: CustomDebugStringConvertible
 {
-    var isCool: Bool { return true }
+//    var isCool: Bool { return true }
     
     // MARK: Person Properties
     var firstName: String
@@ -52,8 +52,8 @@ class Person: Likeable, Friendable, CustomDebugStringConvertible
     var numberOfLikes = 0
     
     // MARK: Friendable Properties
-    var friendID = 0
-    var friends = [Friendable]()
+    var friendID: Int
+    var friends: [Friendable] = []
     
     // MARK: CustomDebugStringConvertible Properties
     var debugDescription: String {
@@ -61,20 +61,21 @@ class Person: Likeable, Friendable, CustomDebugStringConvertible
     }
     
     // MARK: - Initializers
-    init(firstName: String, lastName: String) {
+    init(firstName: String, lastName: String, friendID: Int = 0) {
         self.firstName = firstName
         self.lastName = lastName
-    }
-    
-    convenience init(_ firstName: String, _ lastName: String, _ friendID: Int) {
-        self.init(firstName: firstName, lastName: lastName)
         self.friendID = friendID
     }
+    
+//    convenience init(_ firstName: String, _ lastName: String, _ friendID: Int) {
+//        self.init(firstName: firstName, lastName: lastName)
+//        self.friendID = friendID
+//    }
 }
 
 
 // MARK: - Person's Likeable Methods
-extension Person
+extension Person: Likeable
 {
     func like() {
         numberOfLikes += 1
@@ -88,16 +89,14 @@ extension Person
 }
 
 // MARK: - Person's Friendable Methods
-extension Person
+extension Person: Friendable
 {
     func friend(_ newFriend: Friendable) {
         friends.append(newFriend)
     }
     
     func unfriend(_ oldFriend: Friendable) {
-        friends = friends.filter { currFriend in
-            return currFriend.friendID != oldFriend.friendID
-        }
+        friends = friends.filter { return $0.friendID != oldFriend.friendID }
     }
     
     func unfriend2(_ oldFriend: Friendable) {

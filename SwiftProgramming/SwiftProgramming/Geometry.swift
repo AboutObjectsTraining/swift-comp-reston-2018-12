@@ -7,6 +7,7 @@ struct Point: CustomStringConvertible {
     }
 }
 
+// MARK: - Size
 struct Size: CustomStringConvertible {
     var width: Double
     var height: Double
@@ -16,18 +17,11 @@ struct Size: CustomStringConvertible {
     }
 }
 
-struct Rectangle: CustomStringConvertible {
+// MARK: - Rectangle
+struct Rectangle {
     // Stored properties
     var origin: Point
     var size: Size
-    
-    // Computed properties
-    var x: Double { return origin.x }
-    var y: Double { return origin.y }
-    var width: Double { return size.width }
-    var height: Double { return size.height }
-    
-    var description: String { return "\(origin), \(size)" }
     
     var area: Double { return width * height }
     var center: Point {
@@ -40,4 +34,17 @@ struct Rectangle: CustomStringConvertible {
         let newOrigin = Point(x: x + dx, y: y + dy)
         return Rectangle(origin: newOrigin, size: size)
     }
+}
+
+extension Rectangle: CustomStringConvertible
+{
+    var description: String { return "\(origin), \(size)" }
+}
+
+// MARK: - Computed properties
+extension Rectangle {
+    var x: Double { return origin.x }
+    var y: Double { return origin.y }
+    var width: Double { return size.width }
+    var height: Double { return size.height }
 }

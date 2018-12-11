@@ -21,8 +21,9 @@ struct Address: CustomStringConvertible {
         guard let street2 = street2 else { return street }
         return "\(street), \(street2)"
     }
+    
     var description: String {
-        return "street: \(street), city: \(city), state: \(state)"
+        return "street: \(fullStreet), city: \(city), state: \(state)"
     }
 }
 
@@ -30,7 +31,7 @@ class Customer: CustomStringConvertible
 {
     var name: String?
     var address: Address?
-        
+    
     init() { }
     init(name: String?, address: Address?) {
         self.name = name
@@ -38,8 +39,12 @@ class Customer: CustomStringConvertible
     }
     
     var description: String {
-        let address: Any = self.address ?? "N/A"
-        return "name: \(name ?? "N/A")\n" + "address: \(address)\n"
+        switch (name, address) {
+        case let (name?, address?): return "name: \(name), address: \(address)"
+        case let (name?, _):        return "name: \(name)"
+        case let (_, address?):     return "address: \(address)"
+        default:                    return "Unknown"
+        }
     }
 }
 
@@ -47,17 +52,30 @@ extension Array where Element: Customer
 {
     func customer(named name: String) -> Customer?
     {
+        return first(where: { $0.name == name })
+        
+//        return filter { $0.name == name }.first
+
+        
+//        for customer in self where customer.name ?? "" == name {
+//            return customer
+//        }
+
+//        for customer in self {
+//            if let currName = customer.name, currName == name {
+//                return customer
+//            }
+//        }
+//        return nil
+    }
+}
+
+
+
+
 //        return self.filter { $0.name ?? "" == name }.first
 //
 //        for customer in self where customer.name ?? "" == name {
 //            return customer
 //        }
-        
-        for customer in self {
-            if let currName = customer.name, currName == name {
-                return customer
-            }
-        }
-        return nil
-    }
-}
+

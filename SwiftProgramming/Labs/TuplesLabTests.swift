@@ -65,4 +65,13 @@ class TuplesLabTests: XCTestCase
         print(shirts.formattedLineItems())
         print(shirts.formattedLineItems2())
     }
+    
+    func testMe() {
+        let supplies = [("pens", 1.75), ("pads", 1.25), ("glue", 2.50)]
+        let item = supplies[0]
+        
+        if case let (name, price) = item, price < 2 {
+            print("\(name): $\(price)")
+        }
+    }
 }

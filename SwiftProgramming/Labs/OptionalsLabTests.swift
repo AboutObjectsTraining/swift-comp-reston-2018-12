@@ -15,6 +15,20 @@ var customers = [
 
 class OptionalsLabTests: XCTestCase
 {
+    func testDefer() {
+        defer {
+            print("World!")
+        }
+        
+        print("Running...")
+        
+        defer {
+            print("Hello, ")
+        }
+        
+        print("Finished")
+    }
+    
     func testFullStreet() {
         print(address1.fullStreet)
         print(address2.fullStreet)

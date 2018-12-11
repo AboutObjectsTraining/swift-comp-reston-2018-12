@@ -27,6 +27,13 @@ func !=(lhs: Friendable, rhs: Friendable) -> Bool
     return lhs.friendID != rhs.friendID
 }
 
+extension Person
+{
+    convenience init(_ firstName: String, _ lastName: String, _ friendID: Int) {
+        self.init(firstName: firstName, lastName: lastName, friendID: friendID)
+    }
+}
+
 class ClassesLabTests: XCTestCase
 {
     func testLikes() {
@@ -91,10 +98,10 @@ class ClassesLabTests: XCTestCase
         print(y)
     }
     
-    func testCoolness() {
-        let p1 = Person(firstName: "Fred", lastName: "Smith")
-        print("isCool == \(p1.isCool)")
-        let p2: Likeable = Person(firstName: "Fred", lastName: "Smith")
-        print("isCool == \(p2.isCool)")
-    }
+//    func testCoolness() {
+//        let p1 = Person(firstName: "Fred", lastName: "Smith")
+//        print("isCool == \(p1.isCool)")
+//        let p2: Likeable = Person(firstName: "Fred", lastName: "Smith")
+//        print("isCool == \(p2.isCool)")
+//    }
 }
