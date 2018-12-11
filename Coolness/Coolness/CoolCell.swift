@@ -16,18 +16,59 @@ class CoolCell: UIView
     static let textAttributes: [NSAttributedString.Key: Any] = [.font:  UIFont.boldSystemFont(ofSize: 20),
                                                                 .foregroundColor: UIColor.white]
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    private func configureLayer() {
         layer.borderWidth = 3
         layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 10
         layer.masksToBounds = true
     }
     
+    private func configureGestureRecognizers() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(bounce))
+        recognizer.numberOfTapsRequired = 2
+        addGestureRecognizer(recognizer)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureLayer()
+        configureGestureRecognizers()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - Core Animation
+extension CoolCell
+{
+    @objc func bounce() {
+        print("In \(#function)")
+        animateBounce(duration: 1.0, size: CGSize(width: 120, height: 240))
+    }
+    
+    func animateFinishBounce(duration: TimeInterval) {
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.transform = .identity
+        }
+    }
+    
+    func configureBounce(size: CGSize) {
+        let translation = CGAffineTransform(translationX: size.width, y: size.height)
+        UIView.setAnimationRepeatCount(3.5)
+        UIView.setAnimationRepeatAutoreverses(true)
+        transform = translation.rotated(by: .pi / 2)
+    }
+    
+    func animateBounce(duration: TimeInterval, size: CGSize) {
+        UIView.animate(withDuration: duration,
+                       animations: { [weak self] in self?.configureBounce(size: size) },
+                       completion: { [weak self] _ in self?.animateFinishBounce(duration: duration)  }
+        )
+    }
+}
+
 
 // MARK: - Custom drawing and resizing
 extension CoolCell
