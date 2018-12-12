@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB84CB7021C18C35005382B6 /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB84CB6F21C18C35005382B6 /* CoolView.swift */; };
 		ABF5C7AC21C004C7000F540C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5C7AB21C004C7000F540C /* AppDelegate.swift */; };
 		ABF5C7B321C004C9000F540C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF5C7B221C004C9000F540C /* Assets.xcassets */; };
 		ABF5C7B621C004C9000F540C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF5C7B421C004C9000F540C /* LaunchScreen.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB84CB6F21C18C35005382B6 /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		ABF5C7A821C004C7000F540C /* Coolness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coolness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5C7AB21C004C7000F540C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF5C7B221C004C9000F540C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				ABF5C7AB21C004C7000F540C /* AppDelegate.swift */,
+				AB84CB6F21C18C35005382B6 /* CoolView.swift */,
 				ABF5C7BF21C02F1A000F540C /* CoolCell.swift */,
 				ABF5C7BD21C0248F000F540C /* CoolController.swift */,
 				ABF5C7B221C004C9000F540C /* Assets.xcassets */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF5C7BE21C0248F000F540C /* CoolController.swift in Sources */,
+				AB84CB7021C18C35005382B6 /* CoolView.swift in Sources */,
 				ABF5C7AC21C004C7000F540C /* AppDelegate.swift in Sources */,
 				ABF5C7C021C02F1A000F540C /* CoolCell.swift in Sources */,
 			);

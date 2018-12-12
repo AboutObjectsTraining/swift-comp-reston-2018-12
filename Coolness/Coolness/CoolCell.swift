@@ -55,9 +55,10 @@ extension CoolCell
     }
     
     func configureBounce(size: CGSize) {
-        let translation = CGAffineTransform(translationX: size.width, y: size.height)
         UIView.setAnimationRepeatCount(3.5)
         UIView.setAnimationRepeatAutoreverses(true)
+        
+        let translation = CGAffineTransform(translationX: size.width, y: size.height)
         transform = translation.rotated(by: .pi / 2)
     }
     
@@ -101,6 +102,9 @@ extension CoolCell
         let oldLocation = touch.previousLocation(in: nil)
         center.x += newLocation.x - oldLocation.x
         center.y += newLocation.y - oldLocation.y
+//        bounds.origin.x += newLocation.x - oldLocation.x
+//        bounds.origin.y += newLocation.y - oldLocation.y
+//        setNeedsDisplay()
     }
     
     private func finish(touch: UITouch?) {

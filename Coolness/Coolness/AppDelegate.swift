@@ -14,5 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         window?.rootViewController = CoolController()
         window?.makeKeyAndVisible()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("In \(#function)")
+    }
 }
 
