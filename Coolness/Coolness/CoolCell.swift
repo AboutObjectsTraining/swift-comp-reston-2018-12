@@ -5,7 +5,9 @@ private let textOrigin = CGPoint(x: 12, y: 7)
 
 class CoolCell: UIView
 {
-    var text: String?
+    var text: String? {
+        didSet { sizeToFit() }
+    }
     
     private var highlighted: Bool = false {
         didSet {

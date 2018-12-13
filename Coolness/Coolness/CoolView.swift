@@ -65,7 +65,6 @@ class CoolView: UIView
         newCell.frame.origin = origin
         newCell.text = text
         newCell.backgroundColor = color
-        newCell.sizeToFit()
     }
 }
 
