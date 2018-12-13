@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB75761A21C2EAFB0006E79F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75761921C2EAFB0006E79F /* Person.swift */; };
 		ABF5C79121BC2D3B000F540C /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5C79021BC2D3B000F540C /* UnitTests.swift */; };
 		ABF5C79321BC2D3B000F540C /* libLabs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF5C76D21BC26B5000F540C /* libLabs.a */; };
 		ABF5C79A21BC2F9F000F540C /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5C79921BC2F9F000F540C /* Foo.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB75761921C2EAFB0006E79F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		ABF5C76D21BC26B5000F540C /* libLabs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLabs.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5C78E21BC2D3B000F540C /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5C79021BC2D3B000F540C /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				ABF5C79021BC2D3B000F540C /* UnitTests.swift */,
 				ABF5C79D21BC573C000F540C /* CollectionsTests.swift */,
 				ABF5C79221BC2D3B000F540C /* Info.plist */,
+				AB75761921C2EAFB0006E79F /* Person.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				ABF5C79C21BC32CC000F540C /* Converter.swift in Sources */,
 				ABF5C79121BC2D3B000F540C /* UnitTests.swift in Sources */,
+				AB75761A21C2EAFB0006E79F /* Person.swift in Sources */,
 				ABF5C79E21BC573C000F540C /* CollectionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
