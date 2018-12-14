@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,88 +12,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoolController" customModule="Coolness2" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="LPQ-Mn-614" id="fpT-9G-Qek"/>
+                <outlet property="view" destination="0KP-Fq-1eD" id="Spz-09-YwR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="LPQ-Mn-614" userLabel="Cool View" customClass="CoolView" customModule="Coolness2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+        <view contentMode="scaleToFill" id="0KP-Fq-1eD" userLabel="Cool View" customClass="CoolView" customModule="Coolness2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-aI-tR3" userLabel="Accessory View">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-9B-tee">
-                            <rect key="frame" x="337" y="52" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Add"/>
-                            <connections>
-                                <action selector="addCoolCell" destination="LPQ-Mn-614" eventType="touchUpInside" id="C6T-M4-dNG"/>
-                            </connections>
-                        </button>
-                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-Qg-61D">
-                            <rect key="frame" x="8" y="52" width="321" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            <connections>
-                                <outlet property="delegate" destination="LPQ-Mn-614" id="T6c-gR-PsC"/>
-                            </connections>
-                        </textField>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTG-6K-NKk" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="90" width="375" height="722"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFt-IT-vFa" customClass="CoolCell" customModule="Coolness2" customModuleProvider="target">
-                            <rect key="frame" x="21" y="50" width="229" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello World! 🌎🌏🌍☀️"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CrS-Au-WVc" customClass="CoolCell" customModule="Coolness2" customModuleProvider="target">
-                            <rect key="frame" x="58" y="129" width="229" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cool Cells FTW! 🏆🏅🎖"/>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-            </subviews>
-            <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="8hw-MV-gul"/>
-            <connections>
-                <outlet property="accessoryView" destination="Xyh-aI-tR3" id="zFL-eJ-Zz4"/>
-                <outlet property="contentView" destination="xTG-6K-NKk" id="sPf-bc-gPO"/>
-                <outlet property="textField" destination="e1N-Qg-61D" id="g4z-uJ-TwC"/>
-            </connections>
-            <point key="canvasLocation" x="365.60000000000002" y="-282.26600985221677"/>
-        </view>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="Hjd-P3-xtr" customClass="CoolCell" customModule="Coolness2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="47"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="4Tj-0m-KbU"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cool Cells FTW! 🏆🏅🎖"/>
-            </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="552" y="-647"/>
+            <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="YuD-EU-SlC"/>
+            <point key="canvasLocation" x="327" y="-355"/>
         </view>
     </objects>
 </document>
