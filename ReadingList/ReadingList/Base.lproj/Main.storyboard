@@ -29,53 +29,59 @@
         <scene sceneID="z3I-a4-D7F">
             <objects>
                 <tableViewController id="Kcb-5k-QiR" customClass="ReadingListController" customModule="ReadingList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uqJ-Bh-jk8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uqJ-Bh-jk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <sections>
-                            <tableViewSection id="TFB-Xm-rRa">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Ndu-jn-aLF" detailTextLabel="81z-2p-G9t" style="IBUITableViewCellStyleSubtitle" id="O1L-86-hAH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O1L-86-hAH" id="NOr-o9-bRZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="59.666666666666664"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Book" textLabel="Ndu-jn-aLF" detailTextLabel="81z-2p-G9t" style="IBUITableViewCellStyleSubtitle" id="O1L-86-hAH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O1L-86-hAH" id="NOr-o9-bRZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="59.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="The Tempest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ndu-jn-aLF">
+                                            <rect key="frame" x="16" y="9.9999999999999982" width="100" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="The Tempest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ndu-jn-aLF">
-                                                    <rect key="frame" x="16" y="9.9999999999999982" width="100" height="20.333333333333332"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="2011  William Shakespeare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81z-2p-G9t">
-                                                    <rect key="frame" x="16" y="33.333333333333329" width="149.66666666666666" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="EA2-bF-hip" kind="show" id="9XF-HF-kkV"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="2011  William Shakespeare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81z-2p-G9t">
+                                            <rect key="frame" x="16" y="33.333333333333329" width="149.66666666666666" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="EA2-bF-hip" kind="show" id="9XF-HF-kkV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="Kcb-5k-QiR" id="BMM-nS-F7x"/>
+                            <outlet property="dataSource" destination="vrW-1q-fm2" id="doJ-9B-1T4"/>
                             <outlet property="delegate" destination="Kcb-5k-QiR" id="Jc7-K8-cta"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Reading List" id="up4-Gt-MZS"/>
+                    <connections>
+                        <outlet property="dataSource" destination="vrW-1q-fm2" id="uqN-2p-gUv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSe-e0-45D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="DtE-k7-aJt" customClass="ReadingListStore" customModule="ReadingListModel"/>
+                <customObject id="vrW-1q-fm2" customClass="DataSource" customModule="ReadingList" customModuleProvider="target">
+                    <connections>
+                        <outlet property="store" destination="DtE-k7-aJt" id="lBI-wS-FIQ"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-746" y="-4"/>
+            <point key="canvasLocation" x="-738" y="-1"/>
         </scene>
         <!--Book Detail-->
         <scene sceneID="fnS-hL-Cg6">
@@ -203,6 +209,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="bQY-Xd-Z4c" id="IRd-SU-AXK"/>
+                        <outlet property="titleLabel" destination="DKw-Hr-eRy" id="PCy-Cu-WeT"/>
+                        <outlet property="yearLabel" destination="aqz-Zb-28I" id="7Kj-YB-Iqi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5w-pW-e9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
